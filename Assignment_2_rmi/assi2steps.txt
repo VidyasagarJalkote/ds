@@ -1,0 +1,13 @@
+✅ Assignment 2 (RMI)
+Steps:
+Create all files:
+Interface
+Implementation
+Server
+Client
+Run RMI registry (outside Eclipse):
+rmiregistry
+Run Server (in Eclipse)
+Run Client
+
+✔ Works fine

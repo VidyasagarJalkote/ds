@@ -1,0 +1,20 @@
+✅ Execution Steps (Eclipse)
+🔹 1. Create Java Project
+Assi8_WebService
+🔹 2. Create File
+SimpleWebService.java
+🔹 3. Paste Code
+
+Paste your code.
+
+🔹 4. Run Program
+Right Click
+→ Run As
+→ Java Application
+🔹 5. Open Browser
+
+Type:
+
+http://localhost:8000/add?a=10&b=5
+🧪 Output
+Result = 15

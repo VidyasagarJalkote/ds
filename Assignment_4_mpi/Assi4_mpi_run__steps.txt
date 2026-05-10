@@ -1,0 +1,57 @@
+first download mpi zip file 
+Download MPJ Express:
+wget https://sourceforge.net/projects/mpjexpress/files/latest/download -O mpj.tar.gz
+
+
+Extract File
+
+unzip mpj.tar.gz
+
+⚙️ Execution Steps
+🔹 1. Open Eclipse IDE
+
+Open Eclipse and create Java project:
+
+Assi4_mpi
+
+🔹 2. Add mpj.jar
+Steps:
+Right click project
+Build Path → Configure Build Path
+Libraries → Add External JARs
+Select:
+/home/mohit/mpj-v0_44/lib/mpj.jar
+Apply and Close
+
+🔹 3. Create Package and Java File
+
+Create package:
+
+mpi
+
+Create file:
+
+SumMPI.java
+
+🔹 4. Write MPI Program
+
+Write MPI sum program in SumMPI.java.
+
+🔹 5. Eclipse Automatically Compiles Program
+
+Compiled class file created inside:
+
+bin/mpi/
+
+🔹 6. Set MPJ Environment Variables
+
+Open Ubuntu terminal and run:
+
+export MPJ_HOME=/home/mohit/mpj-v0_44
+export PATH=$MPJ_HOME/bin:$PATH
+
+🔹 7. Go to bin Folder
+cd ~/eclipse-workspace/Assi4_mpi/bin
+
+🔹 8. Execute MPI Program
+mpjrun.sh -np 4 mpi.SumMPI

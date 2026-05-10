@@ -1,0 +1,118 @@
+🔹 1. Open Eclipse
+
+Open Eclipse IDE.
+
+🔹 2. Create Java Project
+Click:
+File → New → Java Project
+Project Name:
+Assi2_CORBA
+Click Finish
+🔹 3. Create Package
+Right click src
+Select:
+New → Package
+Package name:
+corba
+Finish
+🔹 4. Create IDL File
+
+👉 Outside Eclipse OR inside project folder create:
+
+Calculator.idl
+🔹 5. Write IDL Code
+module CalcApp {
+
+    interface Calculator {
+
+        double add(in double a, in double b);
+        double sub(in double a, in double b);
+        double mul(in double a, in double b);
+        double div(in double a, in double b);
+    };
+};
+🔹 6. Generate Java Files from IDL
+
+Open Ubuntu Terminal.
+
+Go to project src folder:
+
+cd workspace/Assi2_CORBA/src
+
+Run:
+
+idlj -fall Calculator.idl
+
+👉 This creates:
+
+CalcApp/
+
+with helper files automatically.
+
+🔹 7. Refresh Eclipse
+
+In Eclipse:
+
+Right click project
+Click:
+Refresh
+
+Now CalcApp package appears.
+
+🔹 8. Create Java Files
+
+Inside package corba create:
+
+File
+CalculatorImpl.java
+Server.java
+Client.java
+🔹 9. Paste Codes
+
+Use your CORBA codes.
+
+🔹 10. Compile Automatically
+
+👉 Eclipse compiles automatically.
+
+🔹 11. Start Naming Service
+
+Open terminal:
+
+tnameserv -ORBInitialPort 1050
+
+⚠️ Keep terminal OPEN.
+
+🔹 12. Run Server
+
+In Eclipse:
+
+Right click Server.java
+Run As → Java Application
+🔹 13. Add Program Arguments (IMPORTANT)
+
+When running server/client:
+
+Right click:
+Run As → Run Configurations
+
+Add in:
+
+Arguments → Program Arguments
+
+Write:
+
+-ORBInitialPort 1050
+
+Apply → Run
+
+🔹 14. Run Client
+
+Same steps:
+
+Right click Client.java
+Run Configurations
+Add:
+-ORBInitialPort 1050
+
+Run.
